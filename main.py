@@ -1,16 +1,23 @@
-# This is a sample Python script.
+import random
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+print('Use --> 0 for Rock <--, --> 1 for Paper <--, --> 2 for Scissors <--')
 
+user_nr=int(input('Enter your choice: '))
+random_nr=random.randint(0,2)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if random_nr==user_nr:
+    print("It's a draw! ",'Computer choose: ', random_nr)
+elif random_nr==0 and user_nr==1:
+    print('You win! ','Computer choose: ', random_nr)
+elif random_nr==0 and user_nr==2:
+    print('You lose! ','Computer choose: ', random_nr)
+elif random_nr==1 and user_nr==0:
+    print('You lose! ','Computer choose: ', random_nr)
+elif random_nr==1 and user_nr==2:
+    print('You win! ','Computer choose: ', random_nr)
+elif random_nr==2 and user_nr==0:
+    print('You win! ','Computer choose: ', random_nr)
+elif random_nr==2 and user_nr==1:
+    print('You lose! ','Computer choose: ', random_nr)
+else:
+    print('You choose an invalid number. You lose! ')
